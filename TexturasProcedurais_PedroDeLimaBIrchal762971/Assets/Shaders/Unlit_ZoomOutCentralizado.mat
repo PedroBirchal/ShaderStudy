@@ -33,6 +33,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Zoom: 2
+    - _Offset: 0
+    - _Radius: 0.5
+    - _Zoom: 1.47
     m_Colors: []
   m_BuildTextureStacks: []
