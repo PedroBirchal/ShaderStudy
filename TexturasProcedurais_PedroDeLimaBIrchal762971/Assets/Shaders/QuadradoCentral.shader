@@ -32,15 +32,15 @@ Shader "Custom/QuadradoCentral"
             float gBoundY = _Center.y + _Size/2;
 
             // Um valor criado unicamente para dizer se o fragmento se encontra dentro (1) ou fora (0) do perimetro do quadrado
-            float val = 0;
+            float val = 1;
 
             // Compara as coordenadas em x e y do fragmento com as posições minimas e maximas do quadrado
             if(IN.uv_MainTex.x > lBoundX && IN.uv_MainTex.x < gBoundX && IN.uv_MainTex.y > lBoundY && IN.uv_MainTex.y < gBoundY)
-                val = 1;
+                val = 0;
 
             // Por fim, Determina que toda a textura será pintada de azul, ja vermelho e verde serão 0 dentro da area do
             // quadrado e 1 fora dela.
-            o.Albedo = float4(1 - val, 1 - val, 1, 1);
+            o.Albedo = float4(val,val, 1, 1);
         }
         ENDCG
     }

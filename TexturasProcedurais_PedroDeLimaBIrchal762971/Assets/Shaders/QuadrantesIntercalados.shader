@@ -34,11 +34,11 @@ Shader "Custom/QuadrantesIntercalados"
             // X = [0, 1]  Y = [1, 1]      |X-Y| = [1, 0]
             //     [0, 1]      [0, 1]              [0, 1]
             
-            float val = abs(x - y);
+            float val = 1 - abs(x - y);
 
             // Por fim, os valores de r e g seram dados pela diferença entre 1 e o modulo de val,
             // e o valor b será 1 em toda a imagem
-            o.Albedo = float4(1- val, 1- val, 1, 1);
+            o.Albedo = float4(val, val, 1, 1);
         }
         ENDCG
     }

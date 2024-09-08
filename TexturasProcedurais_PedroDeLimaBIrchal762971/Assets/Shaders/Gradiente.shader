@@ -20,7 +20,7 @@ Shader "TexturasProcedurais/Gradiente"
         void surf (Input In, inout SurfaceOutput o)
         {
             // retorna 1 * o valor de x da uv, como o valor de x é 0 na esquerda e 1 na extremidade da direita, isso forma um gradiente de preto até branco.
-            o.Albedo = 1 * In.uv_Texture.x;
+            o.Albedo =  In.uv_Texture.x;
         }
         ENDCG
     }
