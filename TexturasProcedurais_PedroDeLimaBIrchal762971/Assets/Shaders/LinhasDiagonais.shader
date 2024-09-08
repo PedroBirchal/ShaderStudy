@@ -22,7 +22,7 @@ Shader "Unlit/LinhasDiagonais"
         void surf (Input In, inout SurfaceOutput o)
         {
             // Checa se a soma do valor x e y da uv, escalada por _Scale, é divisivel por 2 e pinta de acordo
-            // Dessa forma, as listras seram pintadas na diagonal.
+            // Dessa forma, as listras serão pintadas na diagonal.
             if(int(( 1 - In.uv_Texture.x  +  In.uv_Texture.y) * _Scale) % 2 != 0) o.Albedo = 1;
             else o.Albedo = 0;
         }
